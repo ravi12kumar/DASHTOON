@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comic Panel Generator</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f2f2f2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            
+        }
+
+        #comic-form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 400px;
+            margin-bottom: 20px;
+        }
+
+        #comic-input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        #generate-button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #comic-display {
+            width: 100%;
+            max-width: 600px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .comic-panel {
+            width: 48%;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .comic-panel {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="comic-form">
+        <textarea id="comic-input" placeholder="Enter text for each comic panel"></textarea>
+        <button id="generate-button" onclick="generateComic()">Generate Comic 01</button>
+    </div>
+    <div id="comic-display"></div>
+    <div id="comic-form">
+        <textarea id="comic-input" placeholder="Enter text for each comic panel"></textarea>
+        <button id="generate-button" onclick="generateComic()">Generate Comic 02</button>
+    </div>
+    <div id="comic-display"></div>
+    <div id="comic-form">
+        <textarea id="comic-input" placeholder="Enter text for each comic panel"></textarea>
+        <button id="generate-button" onclick="generateComic()">Generate Comic 03</button>
+    </div>
+    <div id="comic-display"></div>
+    <div id="comic-form">
+        <textarea id="comic-input" placeholder="Enter text for each comic panel"></textarea>
+        <button id="generate-button" onclick="generateComic()">Generate Comic 04</button>
+    </div>
+    <div id="comic-display"></div>
+    <div id="comic-form">
+        <textarea id="comic-input" placeholder="Enter text for each comic panel"></textarea>
+        <button id="generate-button" onclick="generateComic()">Generate Comic 05</button>
+    </div>
+    <div id="comic-display"></div>
+    <div id="comic-form">
+        <textarea id="comic-input" placeholder="Enter text for each comic panel"></textarea>
+        <button id="generate-button" onclick="generateComic()">Generate Comic 06</button>
+    </div>
+    <div id="comic-display"></div>
+    <div id="comic-form">
+        <textarea id="comic-input" placeholder="Enter text for each comic panel"></textarea>
+        <button id="generate-button" onclick="generateComic()">Generate Comic 07</button>
+    </div>
+    <div id="comic-display"></div>
+    <div id="comic-form">
+        <textarea id="comic-input" placeholder="Enter text for each comic panel"></textarea>
+        <button id="generate-button" onclick="generateComic()">Generate Comic 08</button>
+    </div>
+    <div id="comic-display"></div>
+    <div id="comic-form">
+        <textarea id="comic-input" placeholder="Enter text for each comic panel"></textarea>
+        <button id="generate-button" onclick="generateComic()">Generate Comic 09</button>
+    </div>
+    <div id="comic-display"></div>
+    <div id="comic-form">
+        <textarea id="comic-input" placeholder="Enter text for each comic panel"></textarea>
+        <button id="generate-button" onclick="generateComic()">Generate Comic 10</button>
+    </div>
+    <div id="comic-display"></div>
+
+    <script>
+        function generateComic() {
+            // Add your logic to generate comic panels based on the input
+            // You can use JavaScript to manipulate the DOM and create comic panels dynamically
+            // For simplicity, let's assume you have an array of comic panel texts
+            const comicPanelTexts = document.getElementById('comic-input').value.split('\n');
+            const comicDisplay = document.getElementById('comic-display');
+            comicDisplay.innerHTML = '';
+
+            comicPanelTexts.forEach((text, index) => {
+                const comicPanel = document.createElement('div');
+                comicPanel.classList.add('comic-panel');
+                comicPanel.innerText = text;
+                comicDisplay.appendChild(comicPanel);
+            });
+        }
+    </script>
+</body>
+</html>
